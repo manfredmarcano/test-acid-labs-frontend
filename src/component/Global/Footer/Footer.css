@@ -1,0 +1,8 @@
+.App-footer {
+    height: 10vh;
+    width: 100vw;
+    background-color: green;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+}

@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Header from './Global/Header/Header';
+import Footer from './Global/Footer/Footer';
+import Login from './Login/Login';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Manfred Marcano Aro
           </p>
           <a
             className="App-link"
@@ -19,7 +22,12 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
+        <Header />
+        <section className="App-content">
+          <Login />
+        </section>
+        <Footer />
       </div>
     );
   }
