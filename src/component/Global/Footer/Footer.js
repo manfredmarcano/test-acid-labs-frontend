@@ -6,11 +6,7 @@ class Footer extends Component {
   render() {
     return (
         <footer className="App-footer">
-          FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - 
-          FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - 
-          FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - 
-          FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - 
-          FOOTER - FOOTER - FOOTER - FOOTER - FOOTER - 
+          <div className="copyright">Copyright © 2006-2018 Acid Labs</div>
         </footer>
     );
   }

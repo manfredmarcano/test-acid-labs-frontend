@@ -7,48 +7,40 @@ class Login extends Component {
   constructor() {
     super();
     this.state = {
-      email: '123',
+      email: '',
       password: '',
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleEmailChange = (evt) => {
-    this.setState({ email: evt.target.value });
+  handleInputChange = (evt) => {
+    this.setState({
+      [evt.target.name]: evt.target.value
+    });
   }
 
   validateForm() {
-    // return this.state.email.length > 0 && this.state.password.length > 0;
-    return this.state.email.length > 0;
+    let emailValid = this.state.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+    let passwordValid = this.state.password.length > 4;
+    return emailValid && passwordValid;
   }
 
   handleClick() {
-    console.log("Submitted");
+    alert("Login");
   }
 
   render() {
     return (
         <form className="App-login" onSubmit={this.submitForm}>
-
           <div className="title-wrapper">
             <img src={imageLogin} className="imageLogin" />
-            <h1 className="titleLogin">
-              Login
-            </h1>
+            <h1 className="titleLogin">Login</h1>
           </div>
           
-          <input type="email" value={this.state.email} onChange={this.handleEmailChange} placeholder="email"></input>
-          <input type="password" placeholder="password"></input>
-  
-          {/* <button onClick={activateLasers} */}
+          <input type="email"    name="email"    value={this.state.email}    onChange={this.handleInputChange} placeholder="email"   ></input>
+          <input type="password" name="password" value={this.state.password} onChange={this.handleInputChange} placeholder="password"></input>
         
-          <button 
-            className="block" 
-            disabled={!this.validateForm()}
-            onClick={this.handleClick}
-          >
-            Login
-          </button>
+          <button className="block" disabled={!this.validateForm()} onClick={this.handleClick}>Login</button>
         </form>
     );
   }

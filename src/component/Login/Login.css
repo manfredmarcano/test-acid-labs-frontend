@@ -45,8 +45,11 @@
     transition: border 500ms ease-out;
 }
 
-.App-login input:focus {
+.App.acid-labs .App-login input:focus {
     border-color: #39b54a;
+}
+.App.mercado-libre .App-login input:focus {
+    border-color: #f1df24;
 }
 
 @media (max-width: 425px) {
@@ -102,8 +105,6 @@
 }
 
 .App-login button {
-    background-color: #39b54a;
-    border-color: #39b54a;
     font-weight: 500;
     padding: 11px 20px;
     font-size: 12px;
@@ -114,8 +115,21 @@
     margin: 0 auto;
     transition: all 0.3s ease;
     width: 300px;
+    outline: none;
+    cursor: pointer;
+    border-style: solid;
 }
-
+.App.acid-labs .App-login button,
+.App.acid-labs .App-login button:active {
+    background-color: #39b54a;
+    border-color: #39b54a;
+}
+.App.mercado-libre .App-login button,
+.App.mercado-libre .App-login button:active {
+    background-color: #fff159;
+    border-color: #f1df24;
+    color: #333333;
+}
 
 @media (max-width: 425px) {
     .App-login button {
@@ -123,21 +137,18 @@
     }
 }
 
-.App-login button:hover {
-    background-color: rgb(40, 44, 52);
-}
-
 .App-login button:disabled,
 .App-login button[disabled]{
-    color: #948f8f;
-    background-color: #cfd4d8;
-    border-color: #cfd4d8;
-    /* pointer-events: none; */
+    color: #948f8f !important;
+    background-color: #cfd4d8 !important;
+    border-color: #cfd4d8 !important;
     cursor: no-drop;
 }
 
+.App-login button:not(:disabled):hover {
+    background-color: rgb(51, 51, 51) !important;
+    border-color: rgb(51, 51, 51) !important;
+    color: #FFFFFF !important;
+}
 
-/* button.block {
-    width: 100%;
-} */
 
