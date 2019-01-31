@@ -1,13 +1,9 @@
-/*.App-login {
-
-}
-*/
-
 .App-login .title-wrapper {
     display: block;
     text-align: center;
     margin-bottom: 30px;
 }
+
 .App-login .title-wrapper .titleLogin {
     text-transform: uppercase;
     line-height: 30px;
@@ -16,16 +12,13 @@
     margin: 0;
     margin-left: 5px;
 }
+
 .App-login .imageLogin {
     height: 30px;
     width: auto;
     display: inline-block;
     vertical-align: middle;
 }
-
-
-
-
 
 .App-login input {
     padding: 10px 10px 10px 30px;
@@ -36,12 +29,17 @@
     display: block;
     outline: none;
     border: solid 1px #e2dddd;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
     border-radius: 2px;
     margin: 0 auto 10px auto;
     font-size: 11px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     width: 300px;
+    -webkit-transition: border 500ms ease-out;
+    -moz-transition: border 500ms ease-out;
+    -o-transition: border 500ms ease-out;
     transition: border 500ms ease-out;
 }
 
@@ -59,50 +57,44 @@
 }
 
 
-
 /* Placeholder: */
 .App-login input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: #bfbbbb;
-    /* font-family: Roboto; */
     font-size: 11px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 .App-login input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: #bfbbbb;
-    /* font-family: Roboto; */
     font-size: 11px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 .App-login input::-moz-placeholder { /* Mozilla Firefox 19+ */
     color: #bfbbbb;
-    /* font-family: Roboto; */
     font-size: 11px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 .App-login input:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #bfbbbb;
-    /* font-family: Roboto; */
     font-size: 11px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 .App-login input::-ms-input-placeholder { /* Microsoft Edge */
     color: #bfbbbb;
-    /* font-family: Roboto; */
     font-size: 11px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 .App-login input::placeholder { /* Most modern browsers support this now. */
     color: #bfbbbb;
-    /* font-family: Roboto; */
     font-size: 11px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
+
 
 .App-login button {
     font-weight: 500;
@@ -110,24 +102,31 @@
     font-size: 12px;
     color: #FFFFFF;
     line-height: 16px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
     border-radius: 2px;
     display: block;
     margin: 0 auto;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     width: 300px;
     outline: none;
     cursor: pointer;
     border-style: solid;
 }
+
 .App.acid-labs .App-login button,
 .App.acid-labs .App-login button:active {
     background-color: #39b54a;
     border-color: #39b54a;
 }
+
 .App.mercado-libre .App-login button,
 .App.mercado-libre .App-login button:active {
     background-color: #fff159;
-    border-color: #f1df24;
+    border-color: #fdf16e;
     color: #333333;
 }
 
@@ -150,5 +149,3 @@
     border-color: rgb(51, 51, 51) !important;
     color: #FFFFFF !important;
 }
-
-

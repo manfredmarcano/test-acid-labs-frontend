@@ -5,14 +5,29 @@ import Login from './Login/Login';
 import './App.css';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedEmpresa: "mercado-libre"
+    };
+    this.handleUpdateEmpresa = this.handleUpdateEmpresa.bind(this);
+  };
+
+  handleUpdateEmpresa (value) {    
+    this.setState({
+      selectedEmpresa: value
+    });
+  };
+
   render() {
     return (
       <div className="App mercado-libre">
-        <Header />
+        <Header updateEmpresa={this.handleUpdateEmpresa}/>
         <section className="App-content">
-          <Login />
+          <Login empresa={this.state.selectedEmpresa}/>
         </section>
-        <Footer />
+        <Footer empresa={this.state.selectedEmpresa}/>
       </div>
     );
   }
